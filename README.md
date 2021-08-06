@@ -15,6 +15,12 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
 
 **Metodology**: all Twitter emoji have been downloaded from [2] filtering only the ones with specified skin tone, then random "vertical collages" of pair of emoji have been syntethized (~50000) and processed by the cropping algorithm. Results were analyzed finding the probability that each skin tone is preferred versus the other and using confidence intervals to assest significance.
 
+**Note**: 
+- I've noticed that emoji are rasterized when posted but I can't be sure that the input to the automatic cropping was the image+emoji since it is now disabled [3].
+- This analysis is not based on real data and it is likely that the algorithm will prefer natural looking images (e.g: real faces) rather than emoji.
+- This analysis lacks other experiments to understand _why_ this happen, but it is likely that light-skin-tone images have a better contrast. This may explain why dark-skin-tone are preferred versus medium-skin-tone.
+- The risk of harm is extremely low, but can be interesting to reason if it is right to consider stickers in the process of saliency detection or apply them later.
+
 ## Self Evaluation
 
 * Type of Harm: unintentional underrepresentation (20 points), but it can also be intentional since the only tool required is the native client.
@@ -31,3 +37,4 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
   
   [1]: https://twemoji.twitter.com/
   [2]: https://emojipedia.org/twitter/twemoji-13.1/
+  [3]: https://twitter.com/dantley/status/1390040111228723200?s=20
