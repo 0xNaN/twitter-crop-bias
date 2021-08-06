@@ -17,7 +17,8 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
 
 **Note**: 
 - I've noticed that emoji are rasterized when posted but I can't be sure that the input to the automatic cropping was the image+emoji since it is now disabled [3].
-- This analysis is not based on real data and it is likely that the algorithm will prefer natural looking images (e.g: real faces) rather than emoji.
+- This analysis is not based on real data (i.e: created from the offical Twitter App) but it is synthetized.
+- The natural next step should be to check if this bias disappear when emoji are applied to natural images. It is likely that the algorithm will prefer natural looking images (e.g: real faces) rather than emoji.
 - This analysis lacks other experiments to understand _why_ this happen, but it is likely that light-skin-tone images have a better contrast. This may explain why dark-skin-tone are preferred versus medium-skin-tone.
 - The risk of harm is extremely low, but can be interesting to reason if it is right to consider stickers in the process of saliency detection or apply them later.
 
