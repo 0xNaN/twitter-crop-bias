@@ -13,7 +13,7 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
 
 ![](result_pairs.png)
 
-**Metodology**: all Twitter emoji have been downloaded from [2] filtering only the ones with specified skin tone, then random "vertical collages" of pair of emoji have been syntethized (~50000) and processed by the cropping algorithm. Results were analyzed finding the probability that each skin tone is preferred versus the other and using confidence intervals to assest significance.
+**Metodology**: all Twitter emoji have been downloaded from [2] filtering only the ones with specified skin tone, then random "vertical collages" of pair of emoji have been syntethized (~50000) and processed by the cropping algorithm. Results were analyzed finding the probability that each skin tone is preferred (i.e: where the saliency point lies) versus the other and using confidence intervals to assest significance.
 
 **Note**: 
 - I've noticed that emoji are rasterized when posted but I can't be sure that the input to the automatic cropping was the image+emoji since it is now disabled [3].
@@ -21,6 +21,13 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
 - The natural next step should be to check if this bias disappear when emoji are applied to natural images. It is likely that the algorithm will prefer natural looking images (e.g: real faces) rather than emoji.
 - This analysis lacks other experiments to understand _why_ this happen, but it is likely that light-skin-tone images have a better contrast. This may explain why dark-skin-tone are preferred versus medium-skin-tone.
 - The risk of harm is extremely low, but can be interesting to reason if it is right to consider stickers in the process of saliency detection or apply them later.
+
+**Data**: 
+ - `experiment_results.csv`: each rows specify a pair of emoji, the last column specify which emoji was preferred by the cropping algorithm.
+ - `twitter_emoji_pairs_experiment.csv`: same of `experiment.csv` without the result of the cropping algorithm.
+ - `twitter_emoji_collage`: folder containing the ~50000 synthetized pair emoji (JPEG) and the output of the cropping model (TXT). Only the `.txt` are shared in the repo.
+ - `twemoji.html` and `twemoji_links.txt`: web page of [2] used and links of the emoji extracted from the page.
+Following the notebook should be sufficient to obtain the data and reproduce the results.
 
 ## Self Evaluation
 
