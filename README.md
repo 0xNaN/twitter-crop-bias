@@ -19,7 +19,7 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
 
 * Type of Harm: unintentional underrepresentation (20 points), but it can also be intentional since the only tool required is the native client.
 * Multiplier Factors:
-  - **Damage or impact**: "Low impact on a person’s well-being", "harm is measured along a single axis of identity and disproportionally affects a marginalized community" (avg (1, 1.2) = 1.1)
+  - **Damage or impact**: "Low impact on a person’s well-being", "harm is measured along a single axis of identity and disproportionally affects a marginalized community" (avg (1, 1.2) = 1.15)
   - **Affected Users**: This may impact any user of Twitter (Affective User Score = 1.2)
   - **Likelihood or Exploitability**: Extremely rare but it could occur on Twitter (Likelihood = 1.0)
   - **Exploitability**: No programming skills are needed; automated exploit tools exist (Exploitability = 1.3)
@@ -27,7 +27,7 @@ The notebook `emoji-bias.ipynb` demonstrate that when asked to the [image-crop-a
   - **Justification**: Findings were considered strong but could have been improved by doing better analysis, expecially using data created by the client of twitter rather than synthetized. The submission contained limited details about how harms impacted affected people. (Justification = 1.0)
   - **Creativity**: Did not qualify for additional creativity.
   
-  Result: 20 x 1.1 x 1.2 x 1 x 1.3 x 1 x 1 = 34.32
+  Result: 20 x 1.15 x 1.2 x 1 x 1.3 x 1 x 1 = 35.87
   
   [1]: https://twemoji.twitter.com/
   [2]: https://emojipedia.org/twitter/twemoji-13.1/
